@@ -18,3 +18,7 @@ eval "$(starship init zsh)"
 
 # 🎭 aliases
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# 🔨 fixes
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
