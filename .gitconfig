@@ -3,3 +3,5 @@
 	email = trugamr@live.in
 [init]
 	defaultBranch = main
+[core]
+	editor = vim
