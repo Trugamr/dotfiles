@@ -7,3 +7,6 @@ error_symbol = "[➜](bold red)"
 [hostname]
 ssh_symbol = ""
 style = "bold green"
+
+[container]
+disabled = true
