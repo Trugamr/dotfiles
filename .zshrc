@@ -12,6 +12,7 @@ autoload -Uz _zinit
 zinit load agkozak/zsh-z
 zinit light zdharma-continuum/fast-syntax-highlighting
 zinit load lukechilds/zsh-nvm
+zinit load zdharma-continuum/history-search-multi-word
 
 # 🌸 prompt
 eval "$(starship init zsh)"
@@ -22,3 +23,8 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 # 🔨 fixes
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
+
+# 📜 history
+[ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
+HISTSIZE=100000
+SAVEHIST=$HISTSIZE
