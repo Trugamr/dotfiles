@@ -28,3 +28,8 @@ bindkey "^[[1;5D" backward-word
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=100000
 SAVEHIST=$HISTSIZE
+
+# 📜 path
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
