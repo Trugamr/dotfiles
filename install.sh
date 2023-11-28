@@ -26,7 +26,10 @@ fi
 # Install latest LTS version of node using proto
 if ! command -v node &> /dev/null; then
   NODE_VERSION=$(curl https://resolve-node.vercel.app/lts)
-  "$HOME/.proto/bin/proto" install node "$NODE_VERSION"
+  # Proto uses "proto" itself from path to install npm
+  PROTO_HOME="$HOME/.proto"
+  PATH="$PROTO_HOME/bin:$PATH"
+  proto install node "$NODE_VERSION"
 fi
 
 # Install starship prompt (https://starship.rs/)
