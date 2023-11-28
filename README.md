@@ -1,12 +1,9 @@
 # dotfiles
-🌸🌊 configs that make things look pretty.
-
+Make binaries tough and shiny 💎
 
 ### Using these config files
-Clone as bare repository, update config to hide untracked files from `git status` & checkout.
+Clone this repository in home directory and run `install.sh`
 ```bash
-git clone --bare git@github.com:Trugamr/dotfiles.git $HOME/.dotfiles
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-dotfiles config --local status.showUntrackedFiles no
-dotfiles checkout
+git clone https://github.com/Trugamr/dotfiles.git $HOME/dotfiles
+$HOME/dotfiles/install.sh
 ```
