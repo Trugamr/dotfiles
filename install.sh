@@ -46,7 +46,15 @@ fi
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.local/bin"
 
+# Clone dotfiles repo
 clone_directory="$HOME/dotfiles"
+
+# Useful when developing locally
+if [ "$DEBUG" = "true" ]; then
+  rsync -ahP "$PWD" "$clone_directory"
+else
+  git clone https://github.com/Trugamr/dotfiles.git "$clone_directory"
+fi
 
 # Create symlinks to config files
 ln -fs "$clone_directory/.config/starship.toml" "$HOME/.config/starship.toml"
