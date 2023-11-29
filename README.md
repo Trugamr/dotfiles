@@ -2,8 +2,7 @@
 Make binaries tough and shiny 💎
 
 ### Using these config files
-Clone this repository in home directory and run `install.sh`
-```bash
-git clone https://github.com/Trugamr/dotfiles.git $HOME/dotfiles
-$HOME/dotfiles/install.sh
+Install and configure these dotfiles with just one command
+```shell
+curl -sS https://raw.githubusercontent.com/Trugamr/dotfiles/main/install.sh | bash
 ```
