@@ -26,7 +26,7 @@ eval "$(starship init zsh)"
 # 📦 Add binaries to path
 PROTO_HOME="$HOME/.proto"
 PROTO_NODE_GLOBALS="$PROTO_HOME/tools/node/globals"
-export PATH="$PROTO_NODE_GLOBALS/bin:$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
+export PATH="$PROTO_NODE_GLOBALS/bin:$PROTO_HOME/bin:$PATH:$PROTO_HOME/shims"
 
 # 🎹 Key bindings
 bindkey -M emacs '^[[3;5~' kill-word        # ctrl+delete

@@ -1,0 +1,5 @@
+[tools.node]
+bundled-npm = true
+
+[tools.npm]
+shared-globals-dir = true
