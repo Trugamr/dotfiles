@@ -10,6 +10,7 @@ packages=(
   tmux
   vim
   zsh
+  xz-utils # Required by proto
 )
 
 # Install packages on supported platforms
