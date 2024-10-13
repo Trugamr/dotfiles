@@ -1,3 +1,5 @@
+npm = "bundled" # use bundled npm instead of specific version
+
 [tools.node]
 bundled-npm = true
 

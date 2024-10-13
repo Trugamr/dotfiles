@@ -45,7 +45,7 @@ ln -fs "$clone_directory/.zshrc" "$HOME/.zshrc"
 
 # Install proto to manage tooling versions
 if ! command -v proto &> /dev/null; then
-  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.40.0
+  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.41.5
 fi
 
 # Install latest LTS version of node using proto
