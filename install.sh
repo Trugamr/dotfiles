@@ -31,8 +31,11 @@ clone_directory="$HOME/dotfiles"
 if [ "$DEBUG" = "true" ]; then
   rsync -ahP "$PWD/" "$clone_directory"
 else
-  git clone https://github.com/Trugamr/dotfiles.git "$clone_directory"
+  git clone https://github.com/Trugamr/dotfiles.git "$clone_directory"clear
+
 fi
+
+# TODO: Move everything to symlink in separate directory and itreate over it to create symlinks?
 
 # Create symlinks to config files
 ln -fs "$clone_directory/.proto/.prototools" "$HOME/.proto/.prototools"
@@ -41,22 +44,18 @@ ln -fs "$clone_directory/.gitconfig" "$HOME/.gitconfig"
 ln -fs "$clone_directory/.hushlogin" "$HOME/.hushlogin"
 ln -fs "$clone_directory/.tmux.conf" "$HOME/.tmux.conf"
 ln -fs "$clone_directory/.vimrc" "$HOME/.vimrc"
+# Create symlinks to shell files
+ln -fs "$clone_directory/.zsh" "$HOME/.zsh"
 ln -fs "$clone_directory/.zshrc" "$HOME/.zshrc"
 
 # Install proto to manage tooling versions
 if ! command -v proto &> /dev/null; then
-  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.41.5
-fi
-
-# Install latest LTS version of node using proto
-if ! command -v node &> /dev/null; then
-  # Proto uses "proto" itself from path to install npm
-  PATH="$HOME/.proto/bin:$PATH" proto install node lts
+  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.43.0
 fi
 
 # Install starship prompt (https://starship.rs/)
 if ! command -v starship &> /dev/null; then
-  curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes
+  curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes --version 1.21.1
 fi
 
 # Change default shell to zsh
