@@ -31,8 +31,7 @@ clone_directory="$HOME/dotfiles"
 if [ "$DEBUG" = "true" ]; then
   rsync -ahP "$PWD/" "$clone_directory"
 else
-  git clone https://github.com/Trugamr/dotfiles.git "$clone_directory"clear
-
+  git clone https://github.com/Trugamr/dotfiles.git "$clone_directory"
 fi
 
 # TODO: Move everything to symlink in separate directory and itreate over it to create symlinks?
@@ -55,7 +54,7 @@ fi
 
 # Install starship prompt (https://starship.rs/)
 if ! command -v starship &> /dev/null; then
-  curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes --version 1.21.1
+  curl -sS https://starship.rs/install.sh | sudo sh -s -- --yes --version v1.21.1
 fi
 
 # Change default shell to zsh
