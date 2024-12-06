@@ -21,7 +21,6 @@ if [[ "$os" == "Linux" ]]; then
 fi
 
 # Create directories for configs and binaries
-mkdir -p "$HOME/.proto"
 mkdir -p "$HOME/.config"
 mkdir -p "$HOME/.local/bin"
 
@@ -37,7 +36,7 @@ fi
 # TODO: Move everything to symlink in separate directory and itreate over it to create symlinks?
 
 # Create symlinks to config files
-ln -fs "$clone_directory/.proto/.prototools" "$HOME/.proto/.prototools"
+ln -fs "$clone_directory/.prototools" "$HOME/.prototools"
 ln -fs "$clone_directory/.config/starship.toml" "$HOME/.config/starship.toml"
 ln -fs "$clone_directory/.gitconfig" "$HOME/.gitconfig"
 ln -fs "$clone_directory/.hushlogin" "$HOME/.hushlogin"
@@ -49,7 +48,7 @@ ln -fs "$clone_directory/.zshrc" "$HOME/.zshrc"
 
 # Install proto to manage tooling versions
 if ! command -v proto &> /dev/null; then
-  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.43.0
+  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.43.1
 fi
 
 # Install starship prompt (https://starship.rs/)

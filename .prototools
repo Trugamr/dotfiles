@@ -1,0 +1,7 @@
+# These settings are only inherited when commands are ran when being somewhere inside home directory
+
+[tools.node]
+bundled-npm = true
+
+[tools.npm]
+shared-globals-dir = true
