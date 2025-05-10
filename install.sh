@@ -48,7 +48,7 @@ ln -fs "$clone_directory/.zshrc" "$HOME/.zshrc"
 
 # Install proto to manage tooling versions
 if ! command -v proto &> /dev/null; then
-  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.43.1
+  curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- --no-modify-profile --no-modify-path --yes --version 0.48.1
 fi
 
 # Install starship prompt (https://starship.rs/)
