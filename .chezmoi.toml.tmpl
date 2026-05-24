@@ -1,0 +1,3 @@
+{{- if ne .chezmoi.os "linux" -}}
+{{- fail (printf "Only Linux is supported (detected: %s)" .chezmoi.os) -}}
+{{- end -}}

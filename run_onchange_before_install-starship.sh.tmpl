@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+version="{{ .starship_version }}"
+
+installed="$(starship --version 2>/dev/null | awk 'NR==1{print $2}' || true)"
+if [ "$installed" = "${version#v}" ]; then
+  exit 0
+fi
+
+curl -sS https://starship.rs/install.sh | sh -s -- --yes --version "$version" -b "$HOME/.local/bin"
