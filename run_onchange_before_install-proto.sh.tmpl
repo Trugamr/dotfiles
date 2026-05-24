@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+version="{{ .proto_version }}"
+
+installed="$(proto --version 2>/dev/null | awk '{print $2}' || true)"
+if [ "$installed" = "$version" ]; then
+  exit 0
+fi
+
+curl -fsSL https://moonrepo.dev/install/proto.sh | bash -s -- \
+  --no-modify-profile --no-modify-path --yes --version "$version"
