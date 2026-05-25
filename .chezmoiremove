@@ -1,0 +1,7 @@
+.zsh/path.zsh
+.zsh/history.zsh
+.zsh/init.zsh
+.zsh/fzf.zsh
+.zsh/keybinds.zsh
+.zsh/plugins.zsh
+.zsh/prompt.zsh
