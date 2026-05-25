@@ -12,5 +12,15 @@ fi
 sudo apt-get update
 sudo apt-get install -y curl git
 
-# Install chezmoi into ~/.local/bin and immediately run init --apply
-sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin" init --apply Trugamr/dotfiles
+# Install (or refresh) chezmoi to latest
+sh -c "$(curl -fsLS get.chezmoi.io)" -- -b "$HOME/.local/bin"
+
+# Make sure the freshly-installed binary is reachable in this shell
+export PATH="$HOME/.local/bin:$PATH"
+
+# First run clones + applies; subsequent runs pull + apply
+if [[ -d "$HOME/.local/share/chezmoi/.git" ]]; then
+  chezmoi update
+else
+  chezmoi init --apply Trugamr/dotfiles
+fi
