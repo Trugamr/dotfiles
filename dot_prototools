@@ -1,5 +1,8 @@
 # These settings are only inherited when commands are ran when being somewhere inside home directory
 
+# Pinned global versions
+node = "lts"
+
 [tools.node]
 bundled-npm = true
 
