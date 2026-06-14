@@ -1,4 +1,5 @@
 proto_version = "0.57.2"
 starship_version = "v1.25.1"
 fzf_version = "0.73.1"
-muah_ref = "8f6915eb895e7fd8db5bee46f388ee6db5a9c596"
+zellij_version = "0.44.3"
+muah_ref = "a968a520f8cb2481a57f14ac0a35107fcf1a9621"
