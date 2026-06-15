@@ -8,9 +8,11 @@ keybinds {
         bind "w" {
             LaunchOrFocusPlugin "file:~/.config/zellij/plugins/room.wasm" {
                 floating true
+                move_to_focused_tab true
                 ignore_case true
+                quick_jump true
             }
-            SwitchToMode "Normal"
+            SwitchToMode "normal";
         }
     }
 }
