@@ -12,7 +12,7 @@ keybinds {
                 ignore_case true
                 quick_jump true
             }
-            SwitchToMode "normal";
+            SwitchToMode "Normal"
         }
     }
 }
