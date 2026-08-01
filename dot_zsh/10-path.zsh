@@ -4,8 +4,8 @@
 export PATH="$HOME/.local/bin:$PATH"
 
 # Proto
-PROTO_HOME="$HOME/.proto"
-export PATH="$PATH:$PROTO_HOME/shims:$PROTO_HOME/bin"
+export PROTO_HOME="$HOME/.proto"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
 
 # Bun
 export BUN_INSTALL="$HOME/.bun"
@@ -16,4 +16,4 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/go/bin"
 
 # Node globals (managed by proto)
-export PATH="$PATH:$HOME/.proto/tools/node/globals/bin"
+export PATH="$PATH:$PROTO_HOME/tools/node/globals/bin"
