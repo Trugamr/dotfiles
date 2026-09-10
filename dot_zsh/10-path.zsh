@@ -3,6 +3,9 @@
 # User-local binaries (chezmoi, etc.)
 export PATH="$HOME/.local/bin:$PATH"
 
+# OpenCode
+export PATH="$HOME/.opencode/bin:$PATH"
+
 # Proto
 export PROTO_HOME="$HOME/.proto"
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH"
